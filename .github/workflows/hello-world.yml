@@ -4,7 +4,9 @@ on: push
 
 jobs:
     hello-job:
+        env:
+            WORD : "Canada"
         runs-on: ubuntu-latest
         steps:
         - name: Echo text
-          run: echo "Hello, world!"
+          run: echo "Hello, $WORD!"
